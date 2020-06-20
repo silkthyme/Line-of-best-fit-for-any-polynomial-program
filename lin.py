@@ -48,7 +48,7 @@ def link(x, y, thetas):  # take in x, a matrix of dimension (m x n) and y, a mat
     #========Change the stuff here===============#
     alpha = 0.005
     iterations = 1000
-    #=============================================#
+    #============================================#
 
     return get_thetas(x, y, alpha, thetas, iterations)
 
