@@ -44,16 +44,23 @@ def get_thetas(x, y, alpha, thetas,
 
 
 def link(x, y, thetas):  # take in x, a matrix of dimension (m x n) and y, a matrix of dimension (m x 1)
-    alpha = 0.1
-    iterations = 4000
+
+    #========Change the stuff here===============#
+    alpha = 0.005
+    iterations = 1000
+    #=============================================#
+
     return get_thetas(x, y, alpha, thetas, iterations)
 
 
 def finall():
     print('Hello.')
     degree = input('What kind of graph would you like to do?')
-    x = np.arange(-1.7, 1.7, 0.1)
-    y = [i ** 4 - (3 / 10) * i ** 2 - i for i in x]
+
+    #========Change the stuff here===================#
+    x = np.arange(-1.5, 1.8, 0.1)
+    y = [(1.0/7)*(i**8) + 7 - 2*(i**3) for i in x]
+    #=================================================#
 
     x = np.array(x).reshape(len(x), 1)
     block_x = np.tile(x, int(degree))
